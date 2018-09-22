@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>io.headspin.ios_bridge_proxy-us-sf-4.plist</string>
+    <key>WorkingDirectory</key>
+    <string>$HS_TOOLS_HOME/</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/env</string>
+      <string>bash</string>
+      <string>$HS_TOOLS_HOME/device_services/forward_usbmuxd.sh</string>
+      <string>us-sf</string>
+      <string>3005</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+      <key>HS_TOOLS_HOME</key>
+      <string>$HS_TOOLS_HOME</string>
+    </dict>
+    <key>StandardErrorPath</key>
+    <string>$HS_TOOLS_HOME/.log/io.headspin.ios_bridge_proxy-us-sf-4.err</string>
+    <key>StandardOutPath</key>
+    <string>$HS_TOOLS_HOME/.log/io.headspin.ios_bridge_proxy-us-sf-4.out</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+  </dict>
+</plist>
