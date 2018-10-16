@@ -17,7 +17,7 @@ class OrderMEUITests: XCTestCase {
     }
 
     func testExample() {
-        // there will be my first test casd
+        // there will be my first test case
     }
 
 }
