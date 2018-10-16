@@ -16,8 +16,11 @@ class OrderMEUITests: XCTestCase {
         app.launch()
     }
 
-    func testExample() {
-        // there will be my first test case
+    func testLogin() {
+        //login as a guest user
+        // perform search for Hakkasan restaurant
+        // call a waiter for a menu
+        // check alert that waiter on his way
     }
 
 }
