@@ -13,4 +13,5 @@ target "orderMe" do
 	pod 'FacebookShare'
 	pod 'Fabric'
 	pod 'Crashlytics'
+	pod 'SwiftLint'
 end
