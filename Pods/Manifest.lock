@@ -31,6 +31,7 @@ PODS:
   - FBSDKShareKit (4.36.0):
     - FBSDKCoreKit (~> 4.36.0)
   - ObjectMapper (3.3.0)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - ObjectMapper (~> 3.3)
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -56,6 +58,7 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FBSDKShareKit
     - ObjectMapper
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -70,7 +73,8 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
   FBSDKShareKit: 7090fdd55c39b03941efddb64c83a64ff6b3949f
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 3e5271c9119a8eef294f2510a271674db3162d94
+PODFILE CHECKSUM: 6028e8596909485f167c9b63730caed701b2948f
 
 COCOAPODS: 1.5.0
