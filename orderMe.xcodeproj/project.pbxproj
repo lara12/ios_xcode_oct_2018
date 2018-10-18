@@ -341,6 +341,7 @@
 				2B2EA7671CBB0377001507DD /* Resources */,
 				CCC3C6237C0F3B25C5950EFD /* [CP] Embed Pods Frameworks */,
 				4356D9ED2057D0600038FDE4 /* ShellScript */,
+				227BA26E21795040001FF61F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -417,6 +418,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		227BA26E21795040001FF61F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		4356D9ED2057D0600038FDE4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5d0fab03cfdfe7cc226ea2d20f67e431b3a3e96e 2906fe386f0925971771ae22678c399eb7ce309965acfe92281f2951f995f912";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5d0fab03cfdfe7cc226ea2d20f67e431b3a3e96e 2906fe386f0925971771ae22678c399eb7ce309965acfe92281f2951f995f912\n";
 		};
 		842538B1ECA89D2A457917D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -716,6 +734,7 @@
 				CODE_SIGN_ENTITLEMENTS = orderMe/OrderME.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = orderMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
