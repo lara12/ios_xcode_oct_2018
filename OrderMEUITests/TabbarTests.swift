@@ -8,7 +8,7 @@
 
 import XCTest
 
-class TabbarAccessRestriction: XCTestCase {
+class TabbarTests: XCTestCase {
     
     let app = XCUIApplication()
 
@@ -17,7 +17,7 @@ class TabbarAccessRestriction: XCTestCase {
         app.launch()
     }
 
-    func testTapBarAccessRestriction() {
+    func testTabbarAccessRestriction() {
         
         let loginLaterButton = app.buttons["loginLaterButton"]
         loginLaterButton.tap()
