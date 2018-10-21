@@ -25,16 +25,16 @@ class BackFromOrders: XCTestCase {
     let loginLaterButton = app.buttons["loginLaterButton"]
     loginLaterButton.tap()
     
-    app.tables/*@START_MENU_TOKEN@*/.staticTexts["Hakkasan"]/*[[".cells.staticTexts[\"Hakkasan\"]",".staticTexts[\"Hakkasan\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+    app.tables.staticTexts["Hakkasan"].tap()
         
     app.collectionViews.cells["Menu"].otherElements.containing(.image, identifier:"list").element.tap()
         
-    app.collectionViews/*@START_MENU_TOKEN@*/.cells.staticTexts["Rolls"]/*[[".cells.staticTexts[\"Rolls\"]",".staticTexts[\"Rolls\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.tap()
-    
+    app.collectionViews.cells.staticTexts["Rolls"].tap()
+   
     let back50Button = app.buttons["Back 50"]
-    back50Button.tap()
-    back50Button.tap()
-    back50Button.tap()
+    backButton.tap()
+    backButton.tap()
+    backButton.tap()
       
         _ = app.tables.staticTexts["Home"]
         
