@@ -17,11 +17,8 @@ class BackFromOrders: XCTestCase {
         app.launch()
     }
 
-
-    
     func testBackFromOrders() {
         
-    
     let loginLaterButton = app.buttons["loginLaterButton"]
     loginLaterButton.tap()
     
@@ -32,9 +29,9 @@ class BackFromOrders: XCTestCase {
     app.collectionViews.cells.staticTexts["Rolls"].tap()
    
     let back50Button = app.buttons["Back 50"]
-    backButton.tap()
-    backButton.tap()
-    backButton.tap()
+    back50Button.tap()
+    back50Button.tap()
+    back50Button.tap()
       
         _ = app.tables.staticTexts["Home"]
         
@@ -43,7 +40,6 @@ class BackFromOrders: XCTestCase {
             return true
     }
         
-
 }
 
 }
