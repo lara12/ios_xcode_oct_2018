@@ -42,14 +42,20 @@ class WaiterTests: XCTestCase {
         let loginLaterButton = app.buttons["loginLaterButton"]
         loginLaterButton.tap()
         
-        app.tables.staticTexts["Hakkasan"].tap()
-        app.collectionViews.staticTexts["Call a waiter"].tap()
+        let restaurant = app.tables.staticTexts["Hakkasan"]
+        restaurant.tap()
         
-        app.alerts["Pick the table, please"].buttons["Ok"].tap()
+        let callWaiterBtn = app.collectionViews.staticTexts["Call a waiter"]
+        callWaiterBtn.tap()
         
-        app.buttons["Hakkasan"].tap()
+        let pickTableAlertOkBtn = app.alerts["Pick the table, please"].buttons["Ok"]
+        pickTableAlertOkBtn.tap()
         
-        app.buttons["Back 50"].tap()
+        let hakkasanBackBtn = app.buttons["Hakkasan"]
+        hakkasanBackBtn.tap()
+        
+        let backBtn = app.buttons["Back 50"]
+        backBtn.tap()
     }
 
 }
