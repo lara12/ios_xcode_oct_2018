@@ -1,10 +1,19 @@
 //
+<<<<<<< Updated upstream
 //  BackFromOrders.swift
 //  OrderMeUITests
 //
 //  Created by Liudmyla Lerman on 10/20/18.
 //  Copyright © 2018 Boris Gurtovoy. All rights reserved.
 
+=======
+//  OrderMEUITests.swift
+//  OrderMEUITests
+//
+//  Created by Borys Gurtovyi on 10/15/18.
+//  Copyright © 2018 Boris Gurtovoy. All rights reserved.
+//
+>>>>>>> Stashed changes
 
 import XCTest
 
@@ -17,11 +26,8 @@ class BackFromOrders: XCTestCase {
         app.launch()
     }
 
-
-    
     func testBackFromOrders() {
         
-    
     let loginLaterButton = app.buttons["loginLaterButton"]
     loginLaterButton.tap()
     
@@ -43,7 +49,6 @@ class BackFromOrders: XCTestCase {
             return true
     }
         
-
-}
+  }
 
 }
