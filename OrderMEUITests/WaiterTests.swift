@@ -42,7 +42,8 @@ class WaiterTests: XCTestCase {
         let loginLaterButton = app.buttons["loginLaterButton"]
         loginLaterButton.tap()
         
-        app.tables.staticTexts["Hakkasan"].tap()
+        let restaurant = app.tables.staticTexts["Hakkasan"]
+        restaurant.tap()
         app.collectionViews.staticTexts["Call a waiter"].tap()
         
         app.alerts["Pick the table, please"].buttons["Ok"].tap()
