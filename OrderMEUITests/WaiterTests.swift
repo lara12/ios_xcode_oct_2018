@@ -44,7 +44,8 @@ class WaiterTests: XCTestCase {
         
         let restaurant = app.tables.staticTexts["Hakkasan"]
         restaurant.tap()
-        app.collectionViews.staticTexts["Call a waiter"].tap()
+        let callWaiterBtn = app.collectionViews.staticTexts["Call a waiter"]
+        callWaiterBtn.tap()
         
         app.alerts["Pick the table, please"].buttons["Ok"].tap()
         
