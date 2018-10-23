@@ -32,20 +32,11 @@ class BackFromOrders: XCTestCase {
         
     app.collectionViews.cells.staticTexts["Rolls"].tap()
    
-    let back50Button = app.buttons["Back 50"]
-    back50Button.tap()
-    back50Button.tap()
-    back50Button.tap()
+    let backButton = app.buttons["Back 50"]
+    backButton.tap()
+    backButton.tap()
+    backButton.tap()
       
-        _ = app.tables.staticTexts["Home"]
-        
-    addUIInterruptionMonitor(withDescription: "Home") { (text) -> Bool in
-            self.app.tables.staticTexts["Home"].tap()
-            return true
     }
-        
-  }
-
-}
-
-}
+    
+}    
