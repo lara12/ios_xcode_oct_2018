@@ -42,17 +42,14 @@ class VisitRestaurantsTest: XCTestCase {
     }
 
     func selectRestaurant(restaurantName: String) {
-        
         app.tables.staticTexts[restaurantName].tap()
     }
     
     func tapOn(element: XCUIElement) {
-        
         element.tap()
     }
     
     func typeValueInto(element: XCUIElement, value: String) {
-        
         element.typeText(value)
     }
     
