@@ -37,8 +37,7 @@ class VisitRestaurantsTest: XCTestCase {
         selectRestaurant(restaurantName: "Hakkasan")
         tapOn(element: detectTable)
         tapOn(element: tableNumberField)
-        typeValueInto(element: tableNumberField, value: "5")
-        
+        typeValueInto(element: tableNumberField, value: "5")    
     }
 
     func selectRestaurant(restaurantName: String) {
