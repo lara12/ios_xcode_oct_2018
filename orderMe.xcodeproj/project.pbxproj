@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		22FB824F21758B720004B281 /* WaiterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB824E21758B720004B281 /* WaiterTests.swift */; };
 		2B13B0281E064472004A09D2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13B0271E064472004A09D2 /* Menu.swift */; };
 		2B2EA7911CBB03D6001507DD /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2EA7821CBB03D6001507DD /* CategoryCell.swift */; };
@@ -72,6 +73,7 @@
 		1BAD16F67A289A8CEBEDC646 /* Pods_orderMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_orderMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FB824C21758B710004B281 /* OrderMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FB824E21758B720004B281 /* WaiterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterTests.swift; sourceTree = "<group>"; };
+		22FB824E21758B720004B281 /* BackFromOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackFromOrders.swift; sourceTree = "<group>"; };
 		22FB825021758B720004B281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1C0503B5E49B7148C83F5D /* Pods-orderMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-orderMe/Pods-orderMe.release.xcconfig"; sourceTree = "<group>"; };
 		2B13B0271E064472004A09D2 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -150,8 +152,15 @@
 		22FB824D21758B720004B281 /* OrderMEUITests */ = {
 			isa = PBXGroup;
 			children = (
+
 				774F80C7217BC4D2006C0E2E /* TabbarTests.swift */,
 				22FB824E21758B720004B281 /* WaiterTests.swift */,
+
+				22FB824E21758B720004B281 /* BackFromOrders.swift */,
+
+
+				22FB824E21758B720004B281 /* BackFromOrders.swift */,
+
 				22FB825021758B720004B281 /* Info.plist */,
 				864540F5217EB967001C93CE /* VisitRestaurantsTest.swift */,
 			);
@@ -515,9 +524,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				864540F6217EB967001C93CE /* VisitRestaurantsTest.swift in Sources */,
+
 				774F80C8217BC4D2006C0E2E /* TabbarTests.swift in Sources */,
+
 				22FB824F21758B720004B281 /* WaiterTests.swift in Sources */,
+
+				22FB824F21758B720004B281 /* BackFromOrders.swift in Sources */,
+
+				22FB824F21758B720004B281 /* BackFromOrders.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
