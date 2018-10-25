@@ -36,5 +36,26 @@ class WaiterTests: XCTestCase {
         sleep(1)
         app.alerts["Got it!"].buttons["OK"].tap()
     }
+    
+    func testCallHookahMan() {
+        
+        let loginLaterButton = app.buttons["loginLaterButton"]
+        loginLaterButton.tap()
+        
+        let restaurant = app.tables.staticTexts["Hakkasan"]
+        restaurant.tap()
+        
+        let callWaiterBtn = app.collectionViews.staticTexts["Call a waiter"]
+        callWaiterBtn.tap()
+        
+        let pickTableAlertOkBtn = app.alerts["Pick the table, please"].buttons["Ok"]
+        pickTableAlertOkBtn.tap()
+        
+        let hakkasanBackBtn = app.buttons["Hakkasan"]
+        hakkasanBackBtn.tap()
+        
+        let backBtn = app.buttons["Back 50"]
+        backBtn.tap()
+    }
 
 }
