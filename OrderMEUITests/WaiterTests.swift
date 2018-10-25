@@ -19,22 +19,25 @@ class WaiterTests: XCTestCase {
 
     func testBringAMenu() {
 
-        let loginLaterButton = app.buttons["loginLaterButton"]
-        loginLaterButton.tap()
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterButton()
 
-        app.tables.staticTexts["Republique"].tap()
+        let restaurantsListScreen = RestaurantsListScreen()
+        restaurantsListScreen.tapOnRepublique()
 
-        app.collectionViews.staticTexts["Detect table"].tap()
+        let restaurantScreen = RestaurantScreen()
+        restaurantScreen.tapOnDetectTable()
 
-        app.textFields["tableNumberTextField"].tap()
-        app.textFields["tableNumberTextField"].typeText("5")
-        app.buttons["Select table"].tap()
+        let tableSelectionScreen = TableSelectionScreen()
+        tableSelectionScreen.enter(tableNumber: 5)
+        tableSelectionScreen.tapOnSelectButton()
 
-        app.collectionViews.staticTexts["Call a waiter"].tap()
+        let restaurantScreen2 = RestaurantScreen()
+        restaurantScreen2.tapOnCallAWaiter()
+        restaurantScreen2.tapOnBringAMenu()
 
-        app.alerts["The waiter is on his way"].buttons["Bring a menu"].tap()
         sleep(1)
-        app.alerts["Got it!"].buttons["OK"].tap()
+        XCTAssertTrue(restaurantScreen2.gotItAlertExists)
     }
     
     func testCallHookahMan() {
