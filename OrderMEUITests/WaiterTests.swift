@@ -11,6 +11,7 @@ import XCTest
 class WaiterTests: XCTestCase {
 
     let app = XCUIApplication()
+    let republique = "Republique"
 
     override func setUp() {
         continueAfterFailure = false
@@ -19,22 +20,19 @@ class WaiterTests: XCTestCase {
 
     func testBringAMenu() {
 
-        let loginLaterButton = app.buttons["loginLaterButton"]
-        loginLaterButton.tap()
+        let loginScreen = LoginScreen()
+        loginScreen.tapOnLoginLaterButton()
 
-        app.tables.staticTexts["Republique"].tap()
+        let restaurantsListScreen = RestaurantsListScreen(name: republique)
+        let restaurantScreen = restaurantsListScreen.tapOnRestaurant()
 
-        app.collectionViews.staticTexts["Detect table"].tap()
+        let tableSelectionScreen = restaurantScreen.tapOnDetectTable()
+        let restaurantScreen2 = tableSelectionScreen.enter(tableNumber: 5)
+            .tapOnSelectButton()
+        restaurantScreen2.tapOnCallAWaiter()
+            .tapOnBringAMenu()
 
-        app.textFields["tableNumberTextField"].tap()
-        app.textFields["tableNumberTextField"].typeText("5")
-        app.buttons["Select table"].tap()
-
-        app.collectionViews.staticTexts["Call a waiter"].tap()
-
-        app.alerts["The waiter is on his way"].buttons["Bring a menu"].tap()
-        sleep(1)
-        app.alerts["Got it!"].buttons["OK"].tap()
+        XCTAssertTrue(restaurantScreen2.gotItAlertExists, "Got it alert does not exist")
     }
     
     func testCallHookahMan() {
