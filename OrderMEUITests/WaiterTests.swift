@@ -37,7 +37,7 @@ class WaiterTests: XCTestCase {
         restaurantScreen2.tapOnBringAMenu()
 
         sleep(1)
-        XCTAssertFalse(restaurantScreen2.gotItAlertExists)
+        XCTAssertTrue(restaurantScreen2.gotItAlertExists, "Got it alert does not exist")
     }
     
     func testCallHookahMan() {
