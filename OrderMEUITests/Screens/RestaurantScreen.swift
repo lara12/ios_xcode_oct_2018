@@ -6,7 +6,7 @@
 //  Copyright © 2018 Boris Gurtovoy. All rights reserved.
 //
 
-import Foundation
+import XCTest
 
 class RestaurantScreen: BaseScreen {
     
@@ -16,18 +16,33 @@ class RestaurantScreen: BaseScreen {
     private let gotItAlert = app.alerts["Got it!"]
 
     var gotItAlertExists: Bool {
-        return gotItAlert.exists
+        return gotItAlert.waitForExistence(timeout: timeout)
     }
 
-    func tapOnDetectTable() {
+    override init() {
+        super.init()
+        visible()
+    }
+
+    func tapOnDetectTable() -> TableSelectionScreen {
         detectTable.tap()
+        return TableSelectionScreen()
     }
 
-    func tapOnCallAWaiter() {
+    func tapOnCallAWaiter() -> RestaurantScreen {
         callWaiter.tap()
+        return self
     }
 
     func tapOnBringAMenu() {
         bringAMenu.tap()
+    }
+}
+
+// MARK: - Visibility
+
+extension RestaurantScreen {
+    private func visible() {
+        XCTAssertTrue(callWaiter.waitForExistence(timeout: timeout), "RestaurantScreen is not visible")
     }
 }

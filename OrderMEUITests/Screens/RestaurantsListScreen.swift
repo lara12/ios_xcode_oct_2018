@@ -6,14 +6,28 @@
 //  Copyright © 2018 Boris Gurtovoy. All rights reserved.
 //
 
-import Foundation
+import XCTest
 
 class RestaurantsListScreen: BaseScreen {
 
-    private let republiqueRest = app.tables.staticTexts["Republique"]
+    let restaurant: XCUIElement
 
-    func tapOnRepublique() {
-        tap(republiqueRest)
+    init(name: String) {
+        restaurant = BaseScreen.app.tables.staticTexts[name]
+        super.init()
+        visible()
     }
 
+    func tapOnRestaurant() -> RestaurantScreen {
+        tap(restaurant)
+        return RestaurantScreen()
+    }
+}
+
+// MARK: - Visibility
+
+extension RestaurantsListScreen {
+    private func visible() {
+        XCTAssertTrue(restaurant.waitForExistence(timeout: timeout), "RestaurantsListScreen is not visible")
+    }
 }

@@ -11,6 +11,8 @@ import XCTest
 class BaseScreen {
     static let app = XCUIApplication()
 
+    let timeout: TimeInterval = 5
+
     func tap(_ element: XCUIElement) {
         element.tap()
     }

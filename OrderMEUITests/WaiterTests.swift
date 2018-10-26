@@ -11,6 +11,7 @@ import XCTest
 class WaiterTests: XCTestCase {
 
     let app = XCUIApplication()
+    let republique = "Republique"
 
     override func setUp() {
         continueAfterFailure = false
@@ -22,21 +23,15 @@ class WaiterTests: XCTestCase {
         let loginScreen = LoginScreen()
         loginScreen.tapOnLoginLaterButton()
 
-        let restaurantsListScreen = RestaurantsListScreen()
-        restaurantsListScreen.tapOnRepublique()
+        let restaurantsListScreen = RestaurantsListScreen(name: republique)
+        let restaurantScreen = restaurantsListScreen.tapOnRestaurant()
 
-        let restaurantScreen = RestaurantScreen()
-        restaurantScreen.tapOnDetectTable()
-
-        let tableSelectionScreen = TableSelectionScreen()
-        tableSelectionScreen.enter(tableNumber: 5)
-        tableSelectionScreen.tapOnSelectButton()
-
-        let restaurantScreen2 = RestaurantScreen()
+        let tableSelectionScreen = restaurantScreen.tapOnDetectTable()
+        let restaurantScreen2 = tableSelectionScreen.enter(tableNumber: 5)
+            .tapOnSelectButton()
         restaurantScreen2.tapOnCallAWaiter()
-        restaurantScreen2.tapOnBringAMenu()
+            .tapOnBringAMenu()
 
-        sleep(1)
         XCTAssertTrue(restaurantScreen2.gotItAlertExists, "Got it alert does not exist")
     }
     
