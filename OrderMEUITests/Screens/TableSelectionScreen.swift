@@ -12,7 +12,6 @@ class TableSelectionScreen: BaseScreen {
 
     private let numberTextField =  app.textFields["tableNumberTextField"]
     private let selectButton = app.buttons["Select table"]
-    // a akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjha akjshdaksjh
 
     func enter(tableNumber: Int) {
         type(tableNumber.description, in: numberTextField)
@@ -22,5 +21,3 @@ class TableSelectionScreen: BaseScreen {
         tap(selectButton)
     }
 }
-
-
